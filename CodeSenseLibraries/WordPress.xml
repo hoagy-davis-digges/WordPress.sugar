@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <codesense version="1.0">
 
-    <!-- A completion behavior can customize the behavior of a completion when 
-         it's selected in the completion list. If a behavior is defined in the 
-         root <codesense> element, it will be applied to all completion sets 
-         inside (unless more specific behaviors are defined in the sets). -->
     <behavior>
         <append-static>()</append-static>
         <confirm-partial characters="_" />
