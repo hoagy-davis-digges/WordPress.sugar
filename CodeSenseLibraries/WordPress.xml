@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense version="1.0">
+
+    <!-- A completion behavior can customize the behavior of a completion when 
+         it's selected in the completion list. If a behavior is defined in the 
+         root <codesense> element, it will be applied to all completion sets 
+         inside (unless more specific behaviors are defined in the sets). -->
+    <behavior>
+        <append-static>()</append-static>
+        <confirm-partial characters="_" />
+        <confirm characters="(" />
+    </behavior>
+	
+	<!-- Post, Custom Post Type, Page, Attachment and Bookmarks Functions -->
+	<set name="org.wordpress.codex.posts">
+		<completion string="get_adjacent_post" />
+		<completion string="get_boundary_post" />
+		<completion string="get_children" />
+		<completion string="get_extended" />
+		<completion string="get_next_post" />
+		<completion string="get_permalink" />
+		<completion string="get_the_excerpt" />
+		<completion string="get_the_post_thumbnail" />
+		<completion string="get_post" />
+		<completion string="get_post_ancestors" />
+		<completion string="get_post_mime_type" />
+		<completion string="get_post_status" />
+		<completion string="get_edit_post_link" />
+		<completion string="get_previous_post" />
+		<completion string="get_posts" />
+		<completion string="is_single" />
+		<completion string="is_sticky" />
+		<completion string="the_ID" />
+		<completion string="the_date" />
+		<completion string="wp_get_recent_posts" />
+		<completion string="wp_get_single_post" />
+    </set>
+	
+	<set name="org.wordpress.codex.custom_post_type">
+		<completion string="register_post_type" />
+		<completion string="is_post_type_archive" />
+		<completion string="post_type_archive_title" />
+		<completion string="add_post_type_support" />
+		<completion string="remove_post_type_support" />
+		<completion string="post_type_supports" />
+		<completion string="set_post_type" />
+		<completion string="post_type_exists" />
+		<completion string="get_post_type" />
+		<completion string="get_post_types" />
+		<completion string="get_post_type_object" />
+		<completion string="get_post_type_capabilities" />
+		<completion string="get_post_type_labels" />
+		<completion string="is_post_type_hierarchical" />
+	</set>
+	
+	<set name="org.wordpress.codex.post_insertion_removal">
+		<completion string="wp_delete_post" />
+		<completion string="wp_insert_post" />
+		<completion string="wp_publish_post" />
+		<completion string="wp_update_post" />
+	</set>
+	
+	<set name="org.wordpress.codex.pages">
+		<completion string="get_all_page_ids" />
+		<completion string="get_ancestors" />
+		<completion string="get_page" />
+		<completion string="get_page_link" />
+		<completion string="get_page_by_path" />
+		<completion string="get_page_by_title" />
+		<completion string="get_page_children" />
+		<completion string="get_page_hierarchy" />
+		<completion string="get_page_uri" />
+		<completion string="get_pages" />
+		<completion string="is_page" />
+		<completion string="page_uri_index" />
+		<completion string="wp_list_pages" />
+		<completion string="wp_page_menu" />
+	</set>
+	
+	<set name="org.wordpress.codex.postmeta">
+		<completion string="add_post_meta" />
+		<completion string="delete_post_meta" />
+		<completion string="get_post_custom" />
+		<completion string="get_post_custom_keys" />
+		<completion string="get_post_custom_values" />
+		<completion string="get_post_meta" />
+		<completion string="update_post_meta" />
+	</set>
+	
+	<set name="org.wordpress.codex.attachments">
+		<completion string="get_attached_file" />
+		<completion string="is_attachment" />
+		<completion string="is_local_attachment" />
+		<completion string="update_attached_file" />
+		<completion string="wp_attachment_is_image" />
+		<completion string="wp_insert_attachment" />
+		<completion string="wp_delete_attachment" />
+		<completion string="wp_get_attachment_image" />
+		<completion string="wp_get_attachment_link" />
+		<completion string="wp_get_attachment_image_src" />
+		<completion string="wp_get_attachment_metadata" />
+		<completion string="wp_get_attachment_thumb_file" />
+		<completion string="wp_get_attachment_thumb_url" />
+		<completion string="wp_get_attachment_url" />
+		<completion string="wp_check_for_changed_slugs" />
+		<completion string="wp_count_posts" />
+		<completion string="wp_mime_type_icon" />
+		<completion string="wp_update_attachment_metadata" />
+	</set>
+	
+	<set name="org.wordpress.codex.bookmarks">
+		<completion string="get_bookmark" />
+		<completion string="get_bookmarks" />
+		<completion string="wp_list_bookmarks" />
+	</set>
+	
+	<set name="org.wordpress.codex.terms">
+		<completion string="wp_get_post_categories" />
+		<completion string="wp_set_post_categories" />
+		<completion string="wp_get_post_tags" />
+		<completion string="wp_set_post_tags" />
+		<completion string="wp_get_post_terms" />
+		<completion string="wp_set_post_terms" />
+	</set>
+	
+	<set name="org.wordpress.codex.others">
+		<completion string="add_meta_box" />
+		<completion string="remove_meta_box" />
+		<completion string="get_the_ID" />
+		<completion string="get_the_author" />
+		<completion string="get_the_content" />
+		<completion string="get_the_title" />
+		<completion string="wp_trim_excerpt" />
+	</set>
+	
+	<!-- Category, Tag and Taxonomy Functions -->
+	<set name="org.wordpress.codex.categories">
+		<completion string="cat_is_ancestor_of" />
+		<completion string="get_all_category_ids" />
+		<completion string="get_ancestors" />
+		<completion string="get_cat_ID" />
+		<completion string="get_cat_name" />
+		<completion string="get_categories" />
+		<completion string="get_category" />
+		<completion string="get_category_by_path" />
+		<completion string="get_category_by_slug" />
+		<completion string="get_the_category_by_ID" />
+		<completion string="get_category_link" />
+		<completion string="get_category_parents" />
+		<completion string="get_the_category" />
+		<completion string="in_category" />
+		<completion string="is_category" />
+		<completion string="wp_category_checklist" />
+		<completion string="wp_list_categories" />
+	</set>
+	
+	<set name="org.wordpress.codex.category_creation">
+		<completion string="wp_create_category" />
+		<completion string="wp_delete_category" />
+		<completion string="wp_insert_category" />
+	</set>
+	
+	<set name="org.wordpress.codex.tags">
+		<completion string="get_tag" />
+		<completion string="get_tag_link" />
+		<completion string="get_tags" />
+		<completion string="get_the_tag_list" />
+		<completion string="get_the_tags" />
+		<completion string="is_tag" />
+	</set>
+	
+	<set name="org.wordpress.codex.taxonomy">
+		<completion string="get_taxonomies" />
+		<completion string="get_term" />
+		<completion string="get_the_term_list" />
+		<completion string="get_term_by" />
+		<completion string="get_the_terms" />
+		<completion string="get_term_children" />
+		<completion string="get_term_link" />
+		<completion string="get_terms" />
+		<completion string="is_taxonomy_hierarchical" />
+		<completion string="taxonomy_exists" />
+		<completion string="term_exists" />
+		<completion string="register_taxonomy" />
+		<completion string="register_taxonomy_for_object_type" />
+		<completion string="wp_get_object_terms" />
+		<completion string="wp_set_object_terms" />
+		<completion string="wp_insert_term" />
+		<completion string="wp_update_term" />
+		<completion string="wp_delete_term" />
+		<completion string="wp_terms_checklist" />
+	</set>
+	
+	<!-- User and Author Functions -->
+	<set name="org.wordpress.codex.admins_roles_capabilities">
+		<completion string="add_role" />
+		<completion string="author_can" />
+		<completion string="current_user_can" />
+		<completion string="current_user_can_for_blog" />
+		<completion string="get_role" />
+		<completion string="get_super_admins" />
+		<completion string="is_super_admin" />
+		<completion string="map_meta_cap" />
+		<completion string="remove_role" />
+		<completion string="user_can" />
+		<completion string="add_cap" />
+		<completion string="remove_cap" />
+	</set>
+	
+	<set name="org.wordpress.codex.users_and_authors">
+		<completion string="auth_redirect" />
+		<completion string="count_users" />
+		<completion string="count_user_posts" />
+		<completion string="count_many_users_posts" />
+		<completion string="email_exists" />
+		<completion string="get_currentuserinfo" />
+		<completion string="get_profile" />
+		<completion string="get_userdata" />
+		<completion string="get_userdatabylogin" />
+		<completion string="get_usernumposts" />
+		<completion string="get_users" />
+		<completion string="get_users_of_blog" />
+		<completion string="set_current_user" />
+		<completion string="user_pass_ok" />
+		<completion string="username_exists" />
+		<completion string="validate_username" />
+		<completion string="wp_get_current_user" />
+		<completion string="wp_set_current_user" />
+		<completion string="get_author_posts_url" />
+	</set>
+	
+	<set name="org.wordpress.codex.user_meta">
+		<completion string="add_user_meta" />
+		<completion string="delete_user_meta" />
+		<completion string="get_user_meta" />
+		<completion string="update_user_meta" />
+	</set>
+	
+	<set name="org.wordpress.codex.user_insertion_removal">
+		<completion string="wp_create_user" />
+		<completion string="wp_delete_user" />
+		<completion string="wp_insert_user" />
+		<completion string="wp_update_user" />
+	</set>
+	
+	<set name="org.wordpress.codex.login_logout">
+		<completion string="is_user_logged_in" />
+		<completion string="wp_signon" />
+		<completion string="wp_logout" />
+	</set>
+	
+	<!-- Feed functions -->
+	<set name="org.wordpress.codex.feed">
+		<completion string="bloginfo_rss" />
+		<completion string="comment_author_rss" />
+		<completion string="comment_link" />
+		<completion string="comment_text_rss" />
+		<completion string="do_feed" />
+		<completion string="do_feed_atom" />
+		<completion string="do_feed_rdf" />
+		<completion string="do_feed_rss" />
+		<completion string="do_feed_rss2" />
+		<completion string="fetch_feed" />
+		<completion string="get_author_feed_link" />
+		<completion string="get_bloginfo_rss" />
+		<completion string="get_category_feed_link" />
+		<completion string="get_comment_link" />
+		<completion string="get_comment_author_rss" />
+		<completion string="get_post_comments_feed_link" />
+		<completion string="get_search_comments_feed_link" />
+		<completion string="get_search_feed_link" />
+		<completion string="get_the_category_rss" />
+		<completion string="get_the_title_rss" />
+		<completion string="permalink_single_rss" />
+		<completion string="post_comments_feed_link" />
+		<completion string="rss_enclosure" />
+		<completion string="the_title_rss" />
+		<completion string="the_category_rss" />
+		<completion string="the_content_rss" />
+		<completion string="the_excerpt_rss" />
+	</set>
+	
+	<!-- Comment, Ping and Trackback Functions -->
+	<set name="org.wordpress.codex.comments">
+		<completion string="add_ping" />
+		<completion string="add_comment_meta" />
+		<completion string="check_comment" />
+		<completion string="comment_text" />
+		<completion string="comment_form" />
+		<completion string="comments_number" />
+		<completion string="discover_pingback_server_uri" />
+		<completion string="delete_comment_meta" />
+		<completion string="do_all_pings" />
+		<completion string="do_enclose" />
+		<completion string="do_trackbacks" />
+		<completion string="generic_ping" />
+		<completion string="get_approved_comments" />
+		<completion string="get_avatar" />
+		<completion string="get_comment" />
+		<completion string="get_comment_text" />
+		<completion string="get_comment_meta" />
+		<completion string="get_comments" />
+		<completion string="wp_list_comments" />
+		<completion string="get_enclosed" />
+		<completion string="get_lastcommentmodified" />
+		<completion string="get_pung" />
+		<completion string="get_to_ping" />
+		<completion string="have_comments" />
+		<completion string="is_trackback" />
+		<completion string="pingback" />
+		<completion string="privacy_ping_filter" />
+		<completion string="sanitize_comment_cookies" />
+		<completion string="trackback" />
+		<completion string="trackback_url" />
+		<completion string="trackback_url_list" />
+		<completion string="update_comment_meta" />
+		<completion string="weblog_ping" />
+		<completion string="wp_allow_comment" />
+		<completion string="wp_count_comments" />
+		<completion string="wp_delete_comment" />
+		<completion string="wp_filter_comment" />
+		<completion string="wp_get_comment_status" />
+		<completion string="wp_get_current_commenter" />
+		<completion string="wp_insert_comment" />
+		<completion string="wp_new_comment" />
+		<completion string="wp_set_comment_status" />
+		<completion string="wp_throttle_comment_flood" />
+		<completion string="wp_update_comment" />
+		<completion string="wp_update_comment_count" />
+	</set>
+	
+	<set name="org.wordpress.codex.comments_loop">
+		<completion string="comment_class" />
+		<completion string="comment_ID" />
+		<completion string="comment_author" />
+		<completion string="comment_date" />
+		<completion string="comment_time" />
+	</set>
+	
+	<set name="org.wordpress.codex.comments_pagination">
+		<completion string="paginate_comments_links" />
+		<completion string="previous_comments_link" />
+		<completion string="next_comments_link" />
+	</set>
+	
+	<!-- Action, Filter and Plugin Functions -->
+	<set name="org.wordpress.codex.filters">
+		<completion string="has_filter" />
+		<completion string="add_filter" />
+		<completion string="apply_filters" />
+		<completion string="current_filter" />
+		<completion string="merge_filters" />
+		<completion string="remove_filter" />
+		<completion string="remove_all_filters" />
+	</set>
+
+	<set name="org.wordpress.codex.actions">
+		<completion string="has_action" />
+		<completion string="add_action" />
+		<completion string="do_action" />
+		<completion string="do_action_ref_array" />
+		<completion string="did_action" />
+		<completion string="remove_action" />
+		<completion string="remove_all_actions" />
+	</set>
+	
+	<set name="org.wordpress.codex.plugins">
+		<completion string="plugin_basename" />
+		<completion string="plugins_url" />
+		<completion string="register_activation_hook" />
+		<completion string="register_deactivation_hook" />
+		<completion string="register_setting" />
+		<completion string="settings_fields" />
+		<completion string="unregister_setting" />
+		<completion string="menu_page_url" />
+	</set>
+	
+	<set name="org.wordpress.codex.shortcodes">
+		<completion string="add_shortcode" />
+		<completion string="do_shortcode" />
+		<completion string="do_shortcode_tag" />
+		<completion string="get_shortcode_regex" />
+		<completion string="remove_shortcode" />
+		<completion string="remove_all_shortcodes" />
+		<completion string="shortcode_atts" />
+		<completion string="shortcode_parse_atts" />
+		<completion string="strip_shortcodes" />
+	</set>
+	
+	<!-- Theme-related Functions -->
+	<set name="org.wordpress.codex.include_functions">
+		<completion string="comments_template" />
+		<completion string="get_footer" />
+		<completion string="get_header" />
+		<completion string="get_sidebar" />
+		<completion string="get_search_form" />
+	</set>
+	
+	<set name="org.wordpress.codex.other_functions">
+		<completion string="add_custom_background" />
+		<completion string="add_custom_image_header" />
+		<completion string="add_theme_support" />
+		<completion string="body_class" />
+		<completion string="current_theme_supports" />
+		<completion string="dynamic_sidebar" />
+		<completion string="get_404_template" />
+		<completion string="get_archive_template" />
+		<completion string="get_attachment_template" />
+		<completion string="get_author_template" />
+		<completion string="get_category_template|get_category_template" />
+		<completion string="get_comments_popup_template" />
+		<completion string="get_current_theme" />
+		<completion string="get_date_template" />
+		<completion string="get_header_image" />
+		<completion string="get_header_textcolor" />
+		<completion string="get_home_template" />
+		<completion string="get_locale_stylesheet_uri" />
+		<completion string="get_page_template" />
+		<completion string="get_paged_template" />
+		<completion string="get_query_template" />
+		<completion string="get_search_template" />
+		<completion string="get_single_template" />
+		<completion string="get_stylesheet" />
+		<completion string="get_stylesheet_directory" />
+		<completion string="get_stylesheet_directory_uri" />
+		<completion string="get_stylesheet_uri" />
+		<completion string="get_tag_template" />
+		<completion string="get_taxonomy_template" />
+		<completion string="get_template" />
+		<completion string="get_template_directory" />
+		<completion string="get_template_directory_uri" />
+		<completion string="get_template_part" />
+		<completion string="get_theme" />
+		<completion string="get_theme_data" />
+		<completion string="get_theme_support" />
+		<completion string="get_theme_mod" />
+		<completion string="get_theme_root" />
+		<completion string="get_theme_root_uri" />
+		<completion string="get_themes" />
+		<completion string="header_image" />
+		<completion string="header_textcolor" />
+		<completion string="load_template" />
+		<completion string="locale_stylesheet" />
+		<completion string="locate_template" />
+		<completion string="post_class" />
+		<completion string="preview_theme" />
+		<completion string="preview_theme_ob_filter" />
+		<completion string="preview_theme_ob_filter_callback" />
+		<completion string="register_nav_menu" />
+		<completion string="register_nav_menus" />
+		<completion string="register_sidebar" />
+		<completion string="register_sidebars" />
+		<completion string="register_theme_directory" />
+		<completion string="remove_theme_mod" />
+		<completion string="remove_theme_mods" />
+		<completion string="require_if_theme_supports" />
+		<completion string="search_theme_directories" />
+		<completion string="set_theme_mod" />
+		<completion string="switch_theme" />
+		<completion string="validate_current_theme" />
+		<completion string="unregister_nav_menu" />
+		<completion string="wp_enqueue_script" />
+		<completion string="wp_get_archives" />
+		<completion string="wp_get_nav_menu_items" />
+		<completion string="wp_nav_menu" />
+		<completion string="wp_page_menu" />
+	</set>
+	
+	<!-- Formatting Functions -->
+	<set name="org.wordpress.codex.formatting">
+		<completion string="add_magic_quotes" />
+		<completion string="addslashes_gpc" />
+		<completion string="antispambot" />
+		<completion string="attribute_escape" />
+		<completion string="backslashit" />
+		<completion string="balanceTags" />
+		<completion string="clean_pre" />
+		<completion string="clean_url" />
+		<completion string="convert_chars" />
+		<completion string="convert_smilies" />
+		<completion string="ent2ncr" />
+		<completion string="esc_attr" />
+		<completion string="esc_html" />
+		<completion string="esc_js" />
+		<completion string="esc_textarea" />
+		<completion string="esc_url" />
+		<completion string="force_balance_tags" />
+		<completion string="format_to_edit" />
+		<completion string="format_to_post" />
+		<completion string="funky_javascript_fix" />
+		<completion string="htmlentities2" />
+		<completion string="is_email" />
+		<completion string="make_clickable" />
+		<completion string="popuplinks" />
+		<completion string="remove_accents" />
+		<completion string="sanitize_email" />
+		<completion string="sanitize_file_name" />
+		<completion string="sanitize_user" />
+		<completion string="sanitize_title" />
+		<completion string="sanitize_title_with_dashes" />
+		<completion string="seems_utf8" />
+		<completion string="stripslashes_deep" />
+		<completion string="trailingslashit" />
+		<completion string="untrailingslashit" />
+		<completion string="url_shorten" />
+		<completion string="utf8_uri_encode" />
+		<completion string="wpautop" />
+		<completion string="wptexturize" />
+		<completion string="wp_filter_kses" />
+		<completion string="wp_filter_post_kses" />
+		<completion string="wp_filter_nohtml_kses" />
+		<completion string="wp_iso_descrambler" />
+		<completion string="wp_kses" />
+		<completion string="wp_kses_array_lc" />
+		<completion string="wp_kses_attr" />
+		<completion string="wp_kses_bad_protocol" />
+		<completion string="wp_kses_bad_protocol_once" />
+		<completion string="wp_kses_bad_protocol_once2" />
+		<completion string="wp_kses_check_attr_val" />
+		<completion string="wp_kses_decode_entities" />
+		<completion string="wp_kses_hair" />
+		<completion string="wp_kses_hook" />
+		<completion string="wp_kses_html_error" />
+		<completion string="wp_kses_js_entities" />
+		<completion string="wp_kses_no_null" />
+		<completion string="wp_kses_normalize_entities" />
+		<completion string="wp_kses_normalize_entities2" />
+		<completion string="wp_kses_split" />
+		<completion string="wp_kses_split2" />
+		<completion string="wp_kses_stripslashes" />
+		<completion string="wp_kses_version" />
+		<completion string="wp_make_link_relative" />
+		<completion string="wp_rel_nofollow" />
+		<completion string="wp_richedit_pre" />
+		<completion string="wp_specialchars" />
+		<completion string="zeroise" />
+	</set>
+	
+	<!-- Miscellaneous Functions -->
+	<set name="org.wordpress.codex.date_time_functions">
+		<completion string="current_time" />
+		<completion string="date_i18n" />
+		<completion string="get_calendar" />
+		<completion string="get_date_from_gmt" />
+		<completion string="get_lastpostdate" />
+		<completion string="get_lastpostmodified" />
+		<completion string="get_day_link" />
+		<completion string="get_gmt_from_date" />
+		<completion string="get_month_link" />
+		<completion string="get_the_time" />
+		<completion string="get_weekstartend" />
+		<completion string="get_year_link" />
+		<completion string="human_time_diff" />
+		<completion string="is_new_day" />
+		<completion string="iso8601_timezone_to_offset" />
+		<completion string="iso8601_to_datetime" />
+		<completion string="mysql2date" />
+	</set>
+	
+	<set name="org.wordpress.codex.serialization">
+		<completion string="is_serialized" />
+		<completion string="is_serialized_string" />
+		<completion string="maybe_serialize" />
+		<completion string="maybe_unserialize" />
+	</set>
+	
+	<set name="org.wordpress.codex.options">
+		<completion string="add_option" />
+		<completion string="delete_option" />
+		<completion string="form_option" />
+		<completion string="get_alloptions" />
+		<completion string="get_site_option" />
+		<completion string="get_site_url" />
+		<completion string="get_user_option" />
+		<completion string="get_option" />
+		<completion string="update_option" />
+		<completion string="update_user_option" />
+	</set>
+	
+	<set name="org.wordpress.codex.admin_menu_functions">
+		<completion string="add_menu_page" />
+		<completion string="add_submenu_page" />
+		<completion string="add_object_page" />
+		<completion string="add_utility_page" />
+	</set>
+
+	<set name="org.wordpress.codex.form_helpers">
+		<completion string="checked" />
+		<completion string="disabled" />
+		<completion string="selected" />
+	</set>
+	
+	<set name="org.wordpress.codex.nonce_referers">
+		<completion string="check_admin_referer" />
+		<completion string="check_ajax_referer" />
+		<completion string="wp_create_nonce" />
+		<completion string="wp_explain_nonce" />
+		<completion string="wp_get_original_referer" />
+		<completion string="wp_get_referer" />
+		<completion string="wp_nonce_ays" />
+		<completion string="wp_nonce_field" />
+		<completion string="wp_nonce_url" />
+		<completion string="wp_original_referer_field" />
+		<completion string="wp_referer_field" />
+		<completion string="wp_verify_nonce" />
+	</set>
+	
+	<set name="org.wordpress.codex.xmlrpc">
+		<completion string="xmlrpc_getpostcategory" />
+		<completion string="xmlrpc_getposttitle" />
+		<completion string="xmlrpc_removepostdata" />
+		<completion string="user_pass_ok" />
+	</set>
+	
+	<set name="org.wordpress.codex.localization">
+		<completion string="__" />
+		<completion string="_e" />
+		<completion string="_ngettext" />
+		<completion string="_x" />
+		<completion string="esc_attr__" />
+		<completion string="esc_attr_e" />
+		<completion string="get_locale" />
+		<completion string="load_default_textdomain" />
+		<completion string="load_plugin_textdomain" />
+		<completion string="load_textdomain" />
+		<completion string="load_theme_textdomain" />
+	</set>
+	
+	<set name="org.wordpress.codex.cron">
+		<completion string="spawn_cron" />
+		<completion string="wp_clear_scheduled_hook" />
+		<completion string="wp_cron" />
+		<completion string="wp_get_schedule" />
+		<completion string="wp_get_schedules" />
+		<completion string="wp_next_scheduled" />
+		<completion string="wp_reschedule_event" />
+		<completion string="wp_schedule_event" />
+		<completion string="wp_schedule_single_event" />
+		<completion string="wp_unschedule_event" />
+	</set>
+	
+	<set name="org.wordpress.codex.conditional">
+		<completion string="comments_open" />
+		<completion string="has_nav_menu" />
+		<completion string="has_tag" />
+		<completion string="in_category" />
+		<completion string="is_404" />
+		<completion string="is_admin" />
+		<completion string="is_archive" />
+		<completion string="is_attachment" />
+		<completion string="is_author" />
+		<completion string="is_category" />
+		<completion string="is_comments_popup" />
+		<completion string="is_date" />
+		<completion string="is_day" />
+		<completion string="is_feed" />
+		<completion string="is_front_page" />
+		<completion string="is_home" />
+		<completion string="is_month" />
+		<completion string="is_page" />
+		<completion string="is_page_template" />
+		<completion string="is_paged" />
+		<completion string="is_preview" />
+		<completion string="is_search" />
+		<completion string="is_single" />
+		<completion string="is_singular" />
+		<completion string="is_sticky" />
+		<completion string="is_tag" />
+		<completion string="is_tax" />
+		<completion string="is_time" />
+		<completion string="is_trackback" />
+		<completion string="is_year" />
+		<completion string="pings_open" />
+	</set>
+	
+	<set name="org.wordpress.codex.miscellaneous">
+		<completion string="add_query_arg" />
+		<completion string="admin_url" />
+		<completion string="bool_from_yn" />
+		<completion string="cache_javascript_headers" />
+		<completion string="content_url" />
+		<completion string="do_robots" />
+		<completion string="get_bloginfo" />
+		<completion string="get_num_queries" />
+		<completion string="get_query_var" />
+		<completion string="home_url" />
+		<completion string="includes_url" />
+		<completion string="is_blog_installed" />
+		<completion string="is_main_site" />
+		<completion string="is_ssl" />
+		<completion string="log_app" />
+		<completion string="nocache_headers" />
+		<completion string="remove_query_arg" />
+		<completion string="site_url" />
+		<completion string="status_header" />
+		<completion string="wp" />
+		<completion string="wp_check_filetype" />
+		<completion string="wp_clearcookie" />
+		<completion string="wp_die" />
+		<completion string="wp_footer" />
+		<completion string="wp_get_cookie_login" />
+		<completion string="wp_get_http_headers" />
+		<completion string="wp_hash" />
+		<completion string="wp_head" />
+		<completion string="wp_mail" />
+		<completion string="wp_mkdir_p" />
+		<completion string="wp_new_user_notification" />
+		<completion string="wp_notify_moderator" />
+		<completion string="wp_notify_postauthor" />
+		<completion string="wp_parse_args" />
+		<completion string="wp_redirect" />
+		<completion string="wp_reset_postdata" />
+		<completion string="wp_reset_query" />
+		<completion string="wp_remote_fopen" />
+		<completion string="wp_salt" />
+		<completion string="wp_set_auth_cookie" />
+		<completion string="wp_upload_bits" />
+		<completion string="wp_upload_dir" />
+	</set>
+	
+	<!-- Multisite Functions -->
+	<set name="org.wordpress.codex.ms_admin_functions">
+		<completion string="admin_notice_feed" />
+		<completion string="avoid_blog_page_permalink_collision" />
+		<completion string="check_import_new_users" />
+		<completion string="check_upload_size" />
+		<completion string="choose_primary_blog" />
+		<completion string="confirm_delete_users" />
+		<completion string="dashboard_quota" />
+		<completion string="display_space_usage" />
+		<completion string="format_code_lang" />
+		<completion string="get_site_allowed_themes" />
+		<completion string="get_space_allowed" />
+		<completion string="get_upload_space_available" />
+		<completion string="grant_super_admin" />
+		<completion string="is_upload_space_available" />
+		<completion string="ms_deprecated_blogs_file" />
+		<completion string="mu_dropdown_languages" />
+		<completion string="new_user_email_admin_notice" />
+		<completion string="redirect_user_to_blog" />
+		<completion string="refresh_user_details" />
+		<completion string="revoke_super_admin" />
+		<completion string="secret_salt_warning" />
+		<completion string="send_confirmation_on_profile_email" />
+		<completion string="show_post_thumbnail_warning" />
+		<completion string="site_admin_notice" />
+		<completion string="sync_category_tag_slugs" />
+		<completion string="update_option_new_admin_email" />
+		<completion string="update_user_status" />
+		<completion string="upload_size_limit_filter" />
+		<completion string="upload_space_setting" />
+		<completion string="wpmu_delete_blog" />
+		<completion string="wpmu_delete_user" />
+		<completion string="wpmu_get_blog_allowedthemes" />
+		<completion string="_admin_notice_multisite_activate_plugins_page" />
+	</set>
+	
+	<set name="org.wordpress.codex.ms_functions">
+		<completion string="add_blog_option" />
+		<completion string="delete_blog_option" />
+		<completion string="get_blogaddress_by_domain" />
+		<completion string="get_blogaddress_by_id" />
+		<completion string="get_blogaddress_by_name" />
+		<completion string="get_blog_details" />
+		<completion string="get_blog_option" />
+		<completion string="get_blog_status" />
+		<completion string="get_id_from_blogname" />
+		<completion string="get_last_updated" />
+		<completion string="is_archived" />
+		<completion string="refresh_blog_details" />
+		<completion string="restore_current_blog" />
+		<completion string="switch_to_blog" />
+		<completion string="update_archived" />
+		<completion string="update_blog_details" />
+		<completion string="update_blog_option" />
+		<completion string="update_blog_status" />
+		<completion string="wpmu_update_blogs_date" />
+		<completion string="ms_cookie_constants" />
+		<completion string="ms_file_constants" />
+		<completion string="ms_subdomain_constants" />
+		<completion string="ms_upload_constants" />
+		<completion string="add_existing_user_to_blog" />
+		<completion string="add_new_user_to_blog" />
+		<completion string="add_user_to_blog" />
+		<completion string="check_upload_mimes" />
+		<completion string="create_empty_blog" />
+		<completion string="domain_exists" />
+		<completion string="filter_SSL" />
+		<completion string="fix_import_form_size" />
+		<completion string="fix_phpmailer_messageid" />
+		<completion string="force_ssl_content" />
+		<completion string="get_active_blog_for_user" />
+		<completion string="get_admin_users_for_domain" />
+		<completion string="get_blogs_of_user" />
+		<completion string="get_blog_count" />
+		<completion string="get_blog_id_from_url" />
+		<completion string="get_blog_permalink" />
+		<completion string="get_blog_post" />
+		<completion string="get_current_site" />
+		<completion string="get_dashboard_blog" />
+		<completion string="get_dirsize" />
+		<completion string="get_most_recent_post_of_user" />
+		<completion string="get_sitestats" />
+		<completion string="get_user_count" />
+		<completion string="get_user_id_from_string" />
+		<completion string="global_terms" />
+		<completion string="insert_blog" />
+		<completion string="install_blog" />
+		<completion string="install_blog_defaults" />
+		<completion string="is_blog_user" />
+		<completion string="is_email_address_unsafe" />
+		<completion string="is_user_member_of_blog" />
+		<completion string="is_user_option_local" />
+		<completion string="is_user_spammy" />
+		<completion string="maybe_add_existing_user_to_blog" />
+		<completion string="maybe_redirect_404" />
+		<completion string="newblog_notify_siteadmin" />
+		<completion string="newuser_notify_siteadmin" />
+		<completion string="recurse_dirsize" />
+		<completion string="redirect_mu_dashboard" />
+		<completion string="redirect_this_site" />
+		<completion string="remove_user_from_blog" />
+		<completion string="signup_nonce_check" />
+		<completion string="signup_nonce_fields" />
+		<completion string="update_blog_public" />
+		<completion string="update_posts_count" />
+		<completion string="upload_is_file_too_big" />
+		<completion string="upload_is_user_over_quota" />
+		<completion string="users_can_register_signup_filter" />
+		<completion string="welcome_user_msg_filter" />
+		<completion string="wordpressmu_wp_mail_from" />
+		<completion string="wpmu_activate_signup" />
+		<completion string="wpmu_admin_redirect_add_updated_param" />
+		<completion string="wpmu_create_blog" />
+		<completion string="wpmu_create_user" />
+		<completion string="wpmu_log_new_registrations" />
+		<completion string="wpmu_signup_blog" />
+		<completion string="wpmu_signup_blog_notification" />
+		<completion string="wpmu_signup_user" />
+		<completion string="wpmu_signup_user_notification" />
+		<completion string="wpmu_validate_blog_signup" />
+		<completion string="wpmu_validate_user_signup" />
+		<completion string="wpmu_welcome_notification" />
+		<completion string="wpmu_welcome_user_notification" />
+		<completion string="get_current_site_name" />
+		<completion string="is_subdomain_install" />
+		<completion string="ms_not_installed" />
+		<completion string="ms_site_check" />
+		<completion string="wpmu_current_site" />
+	</set>
+	
+</codesense>

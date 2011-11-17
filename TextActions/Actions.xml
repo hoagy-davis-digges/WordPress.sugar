@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<action-recipes>
+		
+		<snippet id="com.wordpress.snippets.loop" category="actions.text.wordpress">
+			<title>WP Loop</title>
+			<text><![CDATA[<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	
+		<h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+		<p class="info"><?php the_time(); ?> by <?php the_author(); ?></p>
+		<?php the_content('${1:Read More &raquo;}'); ?>
+		
+	</article>
+	
+	<?php endwhile; ?>
+	
+	<nav class="posts-nav">
+		<span class="next-posts"><?php next_posts_link( '${2:Older Posts}' ) ?></span>
+		<span class="previous-posts"><?php previous_posts_link( '${3:Newer Posts}' ) ?></span>
+	</nav>
+	
+<?php else : ?>
+
+	<h2>Sorry...</h2>
+	<p>No posts were found.</p>
+	
+<?php endif; ?>$0]]></text>
+			<syntax-context>php, php *</syntax-context>
+			<text-trigger>wloop</text-trigger>
+		</snippet>
+				
+		<snippet id="com.wordpress.snippets.customLoop" category="actions.text.wordpress">
+			<title>WP Custom Loop</title>
+			<text><![CDATA[<?php
+\$custom_query = new WP_Query( '${1:custom parameters here}' );
+if ( \$custom_query->have_posts() ) : while ( \$custom_query->have_posts() ) : \$custom_query->the_post(); ?>
+
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	
+		<h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+		<p class="info"><?php the_time(); ?> by <?php the_author(); ?></p>
+		<?php the_content( '${2:Read More &raquo;}' ); ?>
+		
+	</article>
+	
+<?php endwhile; ?>
+	
+	<nav class="posts-nav">
+		<span class="next-posts"><?php next_posts_link( '${3:Older Posts}' ) ?></span>
+		<span class="previous-posts"><?php previous_posts_link( '${4:Newer Posts}' ) ?></span>
+	</nav>
+	
+<?php else : ?>
+
+	<h1>Sorry...</h1>
+	<p>No posts were found.</p>
+	
+<?php endif; ?>$0]]></text>
+			<syntax-context>php, php *</syntax-context>
+			<text-trigger>wcloop</text-trigger>
+		</snippet>
+						
+		<snippet id="com.wordpress.snippets.themeHeader" category="actions.text.wordpress">
+			<title>WP Theme CSS Header</title>
+			<text><![CDATA[/*  
+Theme Name: ${1:Theme Name}
+Theme URI: http://$2
+Description: ${3:This is the theme description.}
+Version: ${4:1.0}
+Author: ${5:Author Name}
+Author URI: http://$6
+Tags: $7
+*/
+
+$0]]></text>
+			<syntax-context>css, css *</syntax-context>
+			<text-trigger>wtheme</text-trigger>
+		</snippet>
+		
+		<snippet id="com.wordpress.snippets.stylesheetLink" category="actions.text.wordpress">
+			<title>WP Stylesheet Link</title>
+			<text><![CDATA[<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="${1:screen, projection}" />$0]]></text>
+			<syntax-context>php, php *</syntax-context>
+		</snippet>
+				
+		<snippet id="com.wordpress.snippets.registerSidebar" category="actions.text.wordpress">
+			<title>WP Register Sidebar</title>
+			<text><![CDATA[register_sidebar( array(
+	'name' => '${1:sidebar}',
+	'description' => '${2:This is the default sidebar.}',
+	'before_widget' => '<${3:li} id="%1$s" class="widget %2$s">',
+	'after_widget' => '</${3:li}>',
+	'before_title' => '<${4:h3} class="${5:widgettitle}">',
+	'after_title' => '</${4:h3}>',
+) );$0]]></text>
+			<syntax-context>php, php *</syntax-context>
+		</snippet>
+		
+		<snippet id="com.wordpress.snippets.registerPostType" category="actions.text.wordpress">
+			<title>WP Register Post Type</title>
+			<text><![CDATA[register_post_type( '${1:book}', array(
+	'labels' => array(
+		'name' => __( '${2:Books}' ),
+		'singular_name' => __( '${3:Book}' ),
+		'add_new' => __( 'Add New' ),
+		'add_new_item' => __( 'Add New ${3:Book}' ),
+		'edit_item' => __( 'Edit ${3:Book}' ),
+		'new_item' => __( 'New ${3:Book}' ),
+		'view_item' => __( 'View ${3:Book}' ),
+		'search_items' => __( 'Search ${2:Books}' ),
+		'not_found' => __( 'No ${4:books} found' ),
+		'not_found_in_trash' => __( 'No ${4:books} found in Trash' ), 
+		'parent_item_colon' => __( 'Parent ${3:Book}:' ),
+		'menu_name' => __( '${2:Books}' )
+	),
+	'public' => ${5:true},
+	'publicly_queryable' => ${6:true},
+	'show_ui' => ${7:true}, 
+	'show_in_menu' => ${8:true}, 
+	'query_var' => ${9:true},
+	'rewrite' => array( 'slug' => '${1:book}' ),
+	'capability_type' => '${10:post}',
+	'has_archive' => ${11:true}, 
+	'hierarchical' => ${12:false},
+	'menu_position' => ${13:null},
+	'menu_icon' => ${14:null},
+	'supports' => array( ${15:'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments'} ),
+	'register_meta_box_cb' => '${16:book_meta_box}',
+	'taxonomies' => array( ${17:'categories', 'post_tags'} )
+) );$0]]></text>
+			<syntax-context>php, php *</syntax-context>
+		</snippet>
+		
+		<snippet id="com.wordpress.snippets.registerTaxonomy" category="actions.text.wordpress">
+			<title>WP Register Taxonomy</title>
+			<text><![CDATA[register_taxonomy( '${1:genre}', array( '${2:book}' ), array(
+	'labels'       => array(
+		'name' => __( '${3:Genres}' ),
+		'singular_name' => __( '${4:Genre}' ),
+		'search_items' => __( 'Search ${3:Genres}' ),
+		'all_items' => __( 'All ${3:Genres}' ),
+		'parent_item' => __( 'Parent ${4:Genre}' ),
+		'parent_item_colon' => __( 'Parent ${4:Genre}:' ),
+		'edit_item' => __( 'Edit ${4:Genre}' ), 
+		'update_item' => __( 'Update ${4:Genre}' ),
+		'add_new_item' => __( 'Add New ${4:Genre}' ),
+		'new_item_name' => __( 'New ${4:Genre} Name' ),
+		'menu_name' => __( '${4:Genre}' ),
+	),
+	'hierarchical' => ${5:true},
+	'show_ui' => ${6:true},
+	'query_var' => ${7:true},
+	'rewrite' => array( 'slug' => '${1:genre}' )
+) );$0]]></text>
+			<syntax-context>php, php *</syntax-context>
+		</snippet>
+
+		
+		<snippet id="com.wordpress.snippets.registerMenu" category="actions.text.wordpress">
+			<title>WP Register Menu</title>
+			<text><![CDATA[register_nav_menu( '${1:my_nav_menu}', '${2:My Nav Menu}' );$0]]></text>
+			<syntax-context>php, php *</syntax-context>
+		</snippet>
+</action-recipes>

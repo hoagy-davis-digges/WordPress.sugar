@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense>
+
+    <provider>
+    
+        <selector>container.block.embedded.source.php, container.block.embedded.source.php > keyword.constant.other</selector>
+        
+             <completions>org.wordpress.codex.posts</completions>
+			 <completions>org.wordpress.codex.custom_post_type</completions>
+			 <completions>org.wordpress.codex.post_insertion_removal</completions>
+			 <completions>org.wordpress.codex.pages</completions>
+			 <completions>org.wordpress.codex.postmeta</completions>
+			 <completions>org.wordpress.codex.attachments</completions>
+			 <completions>org.wordpress.codex.bookmarks</completions>
+			 <completions>org.wordpress.codex.terms</completions>
+			 <completions>org.wordpress.codex.others</completions>
+			 <completions>org.wordpress.codex.categories</completions>
+			 <completions>org.wordpress.codex.category_creation</completions>
+			 <completions>org.wordpress.codex.tags</completions>
+			 <completions>org.wordpress.codex.taxonomy</completions>
+			 <completions>org.wordpress.codex.admins_roles_capabilities</completions>
+			 <completions>org.wordpress.codex.users_and_authors</completions>
+			 <completions>org.wordpress.codex.user_meta</completions>
+			 <completions>org.wordpress.codex.user_insertion_removal</completions>
+			 <completions>org.wordpress.codex.login_logout</completions>
+			 <completions>org.wordpress.codex.feed</completions>
+			 <completions>org.wordpress.codex.comments</completions>
+			 <completions>org.wordpress.codex.comments_loop</completions>
+			 <completions>org.wordpress.codex.comments_pagination</completions>
+			 <completions>org.wordpress.codex.filters</completions>
+			 <completions>org.wordpress.codex.actions</completions>
+			 <completions>org.wordpress.codex.plugins</completions>
+			 <completions>org.wordpress.codex.shortcodes</completions>
+			 <completions>org.wordpress.codex.include_functions</completions>
+			 <completions>org.wordpress.codex.other_functions</completions>
+			 <completions>org.wordpress.codex.formatting</completions>
+			 <completions>org.wordpress.codex.date_time_functions</completions>
+			 <completions>org.wordpress.codex.serialization</completions>
+			 <completions>org.wordpress.codex.options</completions>
+			 <completions>org.wordpress.codex.admin_menu_functions</completions>
+			 <completions>org.wordpress.codex.form_helpers</completions>
+			 <completions>org.wordpress.codex.nonce_referers</completions>
+			 <completions>org.wordpress.codex.xmlrpc</completions>
+			 <completions>org.wordpress.codex.localization</completions>
+			 <completions>org.wordpress.codex.cron</completions>
+			 <completions>org.wordpress.codex.conditional</completions>
+			 <completions>org.wordpress.codex.miscellaneous</completions>
+			 <completions>org.wordpress.codex.ms_admin_functions</completions>
+			 <completions>org.wordpress.codex.ms_functions</completions>
+        
+        <!-- The + means it will only open autocomplete after one character is typed -->
+        <complete-match>[a-zA-Z0-9_]+</complete-match>
+    
+    </provider>
+
+</codesense>
