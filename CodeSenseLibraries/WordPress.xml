@@ -2,7 +2,7 @@
 <codesense version="1.0">
 
     <behavior>
-        <append-static>()</append-static>
+        <append-static>($1)$0</append-static>
         <confirm-partial characters="_" />
         <confirm characters="(" />
     </behavior>
