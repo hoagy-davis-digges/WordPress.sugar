@@ -56,6 +56,7 @@
 		<completion string="get_the_post_thumbnail" />
 		<completion string="get_the_title" />
 		<completion string="has_post_thumbnail" />
+		<completion string="have_posts" />
 		<completion string="is_attachment" />
 		<completion string="is_local_attachment" />
 		<completion string="is_page" />
@@ -92,6 +93,7 @@
 		<completion string="the_modified_author" />
 		<completion string="the_modified_date" />
 		<completion string="the_modified_time" />
+		<completion string="the_post" />
 		<completion string="the_post_thumbnail" />
 		<completion string="the_search_query" />
 		<completion string="the_shortlink" />
