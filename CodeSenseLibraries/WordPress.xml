@@ -129,6 +129,7 @@
 		<completion string="wp_list_pages" />
 		<completion string="wp_mime_type_icon" />
 		<completion string="wp_publish_post" />
+		<completion string="wp_query" />
 		<completion string="wp_set_post_categories" />
 		<completion string="wp_set_post_tags" />
 		<completion string="wp_set_post_terms" />
