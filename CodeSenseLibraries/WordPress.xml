@@ -93,6 +93,7 @@
 		<completion string="the_modified_author" />
 		<completion string="the_modified_date" />
 		<completion string="the_modified_time" />
+		<completion string="the_permalink" />
 		<completion string="the_post" />
 		<completion string="the_post_thumbnail" />
 		<completion string="the_search_query" />
