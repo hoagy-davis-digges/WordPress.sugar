@@ -3,7 +3,10 @@
 
     <provider>
     
-        <selector>language-root.html.with-php, language-root.html.with-php *:not(string,string *,comment), language-root.php, language-root.php *:not(string,string *,comment)</selector>
+           
+       <!-- <selector>language-root.html.with-php, language-root.html.with-php *:not(string,string *,comment), language-root.php, language-root.php *:not(string,string *,comment)</selector>-->
+       
+       	<selector>embedded.language-root.php</selector>
         
         <completions>org.wordpress.codex.posts</completions>
         <completions>org.wordpress.codex.category</completions>
